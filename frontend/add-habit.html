@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Habit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu-container"></div> <!-- Placeholder for the menu -->
+    <div id="content">
+        <h1>Add a New Habit</h1>
+        <form id="habit-form">
+            <input type="text" id="habit-name" placeholder="Habit Name" required>
+            <textarea id="habit-description" placeholder="Description"></textarea>
+            <select id="habit-frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+            </select>
+            <button type="submit">Add Habit</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
