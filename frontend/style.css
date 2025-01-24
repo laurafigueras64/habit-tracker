@@ -1,7 +1,58 @@
+/* General Reset */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    padding: 20px;
+    display: flex; /* Flexbox layout for menu and content */
+    height: 100vh; /* Full height of the viewport */
 }
-form {
-    margin-bottom: 20px;
+
+/* Menu Styles */
+#menu-container, #menu {
+    background-color: #283618; /* Dark background for the menu */
+    color: #FEFAE0;
+    width: 250px; /* Fixed width for the menu */
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Sticks the menu to the left */
+    top: 0; /* Aligns the menu to the top */
+    left: 0; /* Aligns the menu to the left */
+    overflow-y: auto; /* Scroll if content overflows */
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    padding: 10px 0;
+}
+
+/* Menu List */
+#menu ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu Items */
+#menu ul li {
+    margin: 0;
+}
+
+/* Menu Links */
+#menu ul li a {
+    display: block; /* Make the entire item clickable */
+    padding: 15px 20px; /* Add padding for links */
+    color: #FEFAE0; /* Link text color */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+#menu ul li a:hover {
+    background-color: #32441e; /* Slightly lighter background for hover */
+}
+
+/* Content Styles */
+#content {
+    background-color: #606C38; /* Dark background for the menu */
+    color: #FEFAE0;
+    margin-left: 250px; /* Leave space for the menu */
+    padding: 20px; /* Add padding to content */
+    flex: 1; /* Allow content to grow */
+    overflow-y: auto; /* Scroll if content overflows */
 }
