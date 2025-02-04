@@ -1,58 +1,191 @@
-/* General Reset */
-body {
+/* =============================
+   General Reset and Layout Setup
+   ============================= */
+   body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     display: flex; /* Flexbox layout for menu and content */
     height: 100vh; /* Full height of the viewport */
 }
 
-/* Menu Styles */
+/* =============================
+   Sidebar Menu Styles
+   ============================= */
 #menu-container, #menu {
-    background-color: #283618; /* Dark background for the menu */
-    color: #FEFAE0;
+    background-color: #283618; /* Dark green background for the menu */
+    color: #FEFAE0; /* Light text for contrast */
     width: 250px; /* Fixed width for the menu */
     height: 100vh; /* Full height of the viewport */
     position: fixed; /* Sticks the menu to the left */
     top: 0; /* Aligns the menu to the top */
     left: 0; /* Aligns the menu to the left */
-    overflow-y: auto; /* Scroll if content overflows */
+    overflow-y: auto; /* Enables scrolling if content overflows */
     display: flex;
     flex-direction: column; /* Stack menu items vertically */
     padding: 10px 0;
 }
 
-/* Menu List */
+/* =============================
+   Menu List and Items
+   ============================= */
 #menu ul {
-    list-style: none; /* Remove default list styles */
+    list-style: none; /* Removes default bullet points */
     padding: 0;
     margin: 0;
 }
 
-/* Menu Items */
 #menu ul li {
     margin: 0;
 }
 
-/* Menu Links */
+/* =============================
+   Menu Links and Hover Effect
+   ============================= */
 #menu ul li a {
-    display: block; /* Make the entire item clickable */
-    padding: 15px 20px; /* Add padding for links */
-    color: #FEFAE0; /* Link text color */
-    text-decoration: none; /* Remove underline from links */
+    display: block; /* Makes the entire item clickable */
+    padding: 15px 20px; /* Adds spacing for better clickability */
+    color: #FEFAE0; /* Maintains contrast with the dark background */
+    text-decoration: none; /* Removes default underline */
     transition: background-color 0.3s; /* Smooth hover effect */
 }
 
-/* Hover Effect */
 #menu ul li a:hover {
-    background-color: #32441e; /* Slightly lighter background for hover */
+    background-color: #32441e; /* Slightly lighter green for hover effect */
 }
 
-/* Content Styles */
+/* =============================
+   Main Content Section
+   ============================= */
 #content {
-    background-color: #606C38; /* Dark background for the menu */
+    background-color: #606C38; /* Darker green background */
     color: #FEFAE0;
-    margin-left: 250px; /* Leave space for the menu */
-    padding: 20px; /* Add padding to content */
-    flex: 1; /* Allow content to grow */
-    overflow-y: auto; /* Scroll if content overflows */
+    margin-left: 250px; /* Leaves space for the fixed menu */
+    padding: 20px; /* Adds inner spacing */
+    flex: 1; /* Allows the content to expand dynamically */
+    overflow-y: auto; /* Enables scrolling for overflow */
+}
+
+/* =============================
+   Header Styles
+   ============================= */
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center; /* Centers the title */
+    color: #FEFAE0;
+}
+
+/* =============================
+   Form Styling
+   ============================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between form elements */
+}
+
+input, textarea, select, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #283618;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* =============================
+   Button Styling and Hover Effect
+   ============================= */
+button {
+    background-color: #BC6C25; /* Warm brown button color */
+    color: #FEFAE0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ac5b15; /* Darker shade on hover */
+}
+
+/* =============================
+   Radio Buttons and Checkboxes
+   ============================= */
+.habit-options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.habit-days {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Custom styles for radio buttons and checkboxes */
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none; /* Removes default styles */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%; /* Default to round shape */
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+/* Make checkboxes square instead of round */
+input[type="checkbox"] {
+    border-radius: 4px;
+}
+
+/* Change background when selected */
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    background-color: #000;
+}
+
+/* =============================
+   Label Styling
+   ============================= */
+label {
+    margin-right: 15px; /* Adds spacing for better readability */
+}
+
+/* =============================
+    Styles for Habit Items
+   ============================= */
+.habit-item {
+    background-color: #3d5224;
+    border-left: 5px solid #374b1e;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.habit-item:hover {
+    transform: scale(1.02);
+}
+
+.habit-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.habit-text {
+    flex: 1;
+}
+
+.habit-graphic {
+    width: 50px;
+    height: 50px;
+    background-color: #BC6C25;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 15px;
 }

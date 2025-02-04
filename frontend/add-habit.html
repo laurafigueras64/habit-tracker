@@ -6,17 +6,48 @@
     <title>Add Habit</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="menu-container"></div> <!-- Placeholder for the menu -->
+    <!-- Placeholder for the menu -->
+    <div id="menu-container"></div>
     <div id="content">
         <h1>Add a New Habit</h1>
         <form id="habit-form">
             <input type="text" id="habit-name" placeholder="Habit Name" required>
             <textarea id="habit-description" placeholder="Description"></textarea>
-            <select id="habit-frequency">
-                <option value="daily">Daily</option>
-                <option value="weekly">Weekly</option>
-            </select>
+            
+            <p>Select Days of the Week:</p>
+            <div class="habit-days">
+                <div>
+                    <input type="checkbox" id="monday" name="habit-days" value="monday">
+                    <label for="monday">Monday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tuesday" name="habit-days" value="tuesday">
+                    <label for="tuesday">Tuesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="wednesday" name="habit-days" value="wednesday">
+                    <label for="wednesday">Wednesday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="thursday" name="habit-days" value="thursday">
+                    <label for="thursday">Thursday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="friday" name="habit-days" value="friday">
+                    <label for="friday">Friday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="saturday" name="habit-days" value="saturday">
+                    <label for="saturday">Saturday</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="sunday" name="habit-days" value="sunday">
+                    <label for="sunday">Sunday</label>
+                </div>
+            </div>
+            
             <button type="submit">Add Habit</button>
         </form>
     </div>
