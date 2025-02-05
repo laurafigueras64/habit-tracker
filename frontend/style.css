@@ -109,41 +109,37 @@ button:hover {
 }
 
 /* =============================
-   Radio Buttons and Checkboxes
+   Checkboxes
    ============================= */
-.habit-options {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
 .habit-days {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 20px; /* Space between checkboxes */
+    align-items: center; /* Aligns checkboxes and labels vertically */
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    justify-content: center; /* Centers the checkboxes in the container */
 }
 
-/* Custom styles for radio buttons and checkboxes */
-input[type="radio"], input[type="checkbox"] {
+.habit-days div {
+    display: flex;
+    align-items: center; /* Aligns checkbox and label vertically */
+    gap: 5px; /* Space between checkbox and label */
+}
+
+/* Custom styles for checkboxes */
+input[type="checkbox"] {
     margin-right: 10px;
     appearance: none; /* Removes default styles */
     width: 20px;
     height: 20px;
     border: 2px solid #000;
-    border-radius: 50%; /* Default to round shape */
+    border-radius: 4px; /* Square shape for checkboxes */
     outline: none;
     cursor: pointer;
     display: inline-block;
     position: relative;
 }
 
-/* Make checkboxes square instead of round */
-input[type="checkbox"] {
-    border-radius: 4px;
-}
-
 /* Change background when selected */
-input[type="radio"]:checked,
 input[type="checkbox"]:checked {
     background-color: #000;
 }
@@ -153,6 +149,7 @@ input[type="checkbox"]:checked {
    ============================= */
 label {
     margin-right: 15px; /* Adds spacing for better readability */
+    font-size: 12px;
 }
 
 /* =============================

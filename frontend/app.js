@@ -63,7 +63,12 @@ if (form) {
         const name = document.getElementById('habit-name').value;
         const description = document.getElementById('habit-description').value;
         const dayCheckboxes = document.querySelectorAll('input[name="habit-days"]:checked');
-        const frequency = Array.from(dayCheckboxes).map(checkbox => checkbox.value); // Collect checked values
+        let frequency = Array.from(dayCheckboxes).map(checkbox => checkbox.value); // Collect checked values
+        
+        if (frequency.toString() == 'monday,tuesday,wednesday,thursday,friday,saturday,sunday') {
+            console.log('made it')
+            frequency = "daily";
+        }
 
         try {
             // Send user input data as JSON to the server
